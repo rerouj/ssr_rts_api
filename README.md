@@ -1,7 +1,6 @@
-# ssr_rts_api
+# ssr_rts_api 📺
 
 Connect with ease to the public rts/ssr public API.  
-
 That package is only for accessing the RTS Archives v3 (broadcast) endpoint
 
 # How it works
@@ -24,16 +23,16 @@ username = consumer key
 password = consumer secret
 
 ```python
-    obj = {"username": "your_consumer_key",
-           "password": "yout_consumer_secret"}
+obj = {"username": "your_consumer_key",
+       "password": "yout_consumer_secret"}
 
-    cl = Cl.Client(obj)
+cl = Cl.Client(obj)
 ```
 get your token trough the Client.token parameter
 ```python
 print(cl.token)
 ```
-pass an object with the desired request inside to the Client.request() method
+pass an object with the desired request inside the Client.request() method
 ```python
 querystring = {
     "query": "'id'='103'",
