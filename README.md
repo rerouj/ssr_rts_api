@@ -1,7 +1,14 @@
 # ssr_rts_api
 
-Connect with ease to the public rts/ssr public API.📺  
+Connect with ease to the public rts/ssr public API.  
 That package is only for accessing the RTS Archives v3 (broadcast) endpoint
+
+enjoy exploring rts channel broadcast 📺 !
+
+# Get it
+```
+$ pip install ssr_rts_api
+```
 
 # How it works
 
@@ -56,11 +63,6 @@ save the result with the Client.save() method
 pass a data and a mongodb collection in parameters
 ```python
 res = cl.save_data(data, collection)
-```
-
-# Get it
-```
-$ pip install ssr_rts_api
 ```
 
 # Credit
