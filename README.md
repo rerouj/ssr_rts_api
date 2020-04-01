@@ -3,7 +3,7 @@
 Connect with ease to the public rts/ssr public API.  
 That package is only for accessing the RTS Archives v3 (broadcast) endpoint
 
-enjoy exploring rts channel broadcast 📺 !
+Enjoy exploring RTS (radio télévision suisse romande) channel broadcast open data 📺 !
 
 # Get it
 ```
