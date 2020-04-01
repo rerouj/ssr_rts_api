@@ -85,6 +85,7 @@ class Client:
         :param: data : data list()
         :param: location : list(), indicates field location in json dataset
         :param: value : str()
+        :param: to_pop : array()
         :return: data filtered : json()
         :todo: enable *args with to_pop arg
         """
