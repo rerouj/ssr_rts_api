@@ -14,10 +14,10 @@ $ pip install ssr_rts_api
 
 connect to the RTS archives public api can be a little bit confusing. ssr_rts_api is aimed to resolve that issue.
 
-go to : https://developer.srgssr.ch/apis/rts-archives-v3
+Go to : https://developer.srgssr.ch/apis/rts-archives-v3
 create your app,
-get your consumer key and secret
-remember, that package is only for accessing the "RTS Archives v3" (broadcast) API
+Get your consumer key and secret  
+Remember, that package is only for accessing the "RTS Archives v3" (broadcast) API
 todo: add other endpoint
     
 ```python
