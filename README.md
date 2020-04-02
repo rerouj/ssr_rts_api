@@ -76,7 +76,7 @@ Be kind don't over request the server : use time.sleep()
 ```python
 import time
 
-time.sleep(3)
+time.sleep(3) #zzZZZ
 ```
 # Credit
 
