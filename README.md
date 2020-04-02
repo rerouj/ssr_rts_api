@@ -1,7 +1,7 @@
 # ssr_rts_api
 
-Connect with ease to the public rts/ssr public API.  
-The package is only for accessing the RTS Archives v3 (broadcast) endpoint
+Connect with ease to the rts/ssr channel public API.  
+The package is only for accessing the "RTS Archives v3" (broadcast) endpoint
 
 Enjoy exploring RTS (radio télévision suisse romande) channel broadcast open data 📺 !
 
