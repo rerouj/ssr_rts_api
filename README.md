@@ -42,10 +42,10 @@ Pass an object with the desired request inside the Client.request() method
 ```python
 querystring = {
     "query": "'id'='103'",
-    "rows": "1",
-    "start": "0",
-    "minPublicationDate": "1960",
-    "maxPublicationDate": "2020",
+    "rows": 1,
+    "start": 0,
+    "minPublicationDate": 1960,
+    "maxPublicationDate": 2020,
     "sort": "publicationDate"
 }
 
