@@ -1,7 +1,7 @@
 # ssr_rts_api
 
 Connect with ease to the public rts/ssr public API.  
-That package is only for accessing the RTS Archives v3 (broadcast) endpoint
+The package is only for accessing the RTS Archives v3 (broadcast) endpoint
 
 Enjoy exploring RTS (radio télévision suisse romande) channel broadcast open data 📺 !
 
@@ -12,19 +12,18 @@ $ pip install ssr_rts_api
 
 # How it works
 
-connect to the RTS archives public api can be a little bit confusing. ssr_rts_api is aimed to resolve that issue.
+Connect to the RTS archives public api can be a little bit confusing. ssr_rts_api is aimed to resolve that issue.
 
 Go to : https://developer.srgssr.ch/apis/rts-archives-v3
-create your app,
+Create your app,
 Get your consumer key and secret  
 Remember, the package is only for accessing the "RTS Archives v3" (broadcast) API
-todo: add other endpoint
     
 ```python
 from ssr_rts_api import Client as Cl
 ```
 
-pass an object with your credentials for generating a token and
+Pass an object with your credentials for generating a token and
 instantiate a client access to the API  
 - username = consumer key
 - password = consumer secret
@@ -35,11 +34,11 @@ obj = {"username": "your_consumer_key",
 
 cl = Cl.Client(obj)
 ```
-get your token trough the Client.token parameter
+Get your token trough the Client.token parameter
 ```python
 print(cl.token)
 ```
-pass an object with the desired request inside the Client.request() method
+Pass an object with the desired request inside the Client.request() method
 ```python
 querystring = {
     "query": "'id'='103'",
@@ -54,19 +53,19 @@ results = cl.request(querystring)
 data = results.json()
 ```
 
-results can be a little bit "too generous"
-refine the results with the Client.filter() method
+Results can be a little bit "too" generous.
+Refine the results with the Client.filter() method
 ```python
 filtered = cl.filter_data(data, ['program', 'id'], 103)  # program id : 103 = Temps Présent
 ```
 Use the to_pop argument to pop out fields of the data set.
 
 ```python
-filtered = cl.filter_data(data, ['isOnline'], 'true', 'sequences')  # program id : 103 = Temps Présent
+filtered = cl.filter_data(data, ['isOnline'], 'true', 'sequences')  # pop "sequence" field
 ```
 
-save the result with the Client.save() method
-pass a data array and a mongodb collection in parameters
+Save the result with the Client.save() method.
+Pass a data array and a mongodb collection in parameters
 ```python
 res = cl.save_data(data, collection)
 ```
