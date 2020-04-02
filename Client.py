@@ -1,6 +1,7 @@
 import requests
 import base64
 from urllib import parse
+from pymongo import MongoClient
 
 
 class Client:
@@ -111,7 +112,8 @@ class Client:
 
         return filtered
 
-    def save_data(self, data_set, mongo_collection, file_name=None):
+    @classmethod
+    def save_data(cls, data_set, mongo_collection, file_name=None):
 
         """
         save data to a mongodb database or to a file
