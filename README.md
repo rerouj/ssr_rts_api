@@ -16,7 +16,8 @@ Connect to the RTS archives public api can be a little bit confusing. ssr_rts_ap
 
 Go to : https://developer.srgssr.ch/apis/rts-archives-v3  
 Create your app  
-Get your consumer key and secret  
+Get your consumer key and secret
+  
 **Remember, the package is only for accessing the "RTS Archives v3" (broadcast) API**
     
 ```python
