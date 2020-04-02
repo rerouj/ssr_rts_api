@@ -1,12 +1,12 @@
 import requests
 import base64
 from urllib import parse
-from pymongo import MongoClient
 
 
 class Client:
 
-    """Client classes for requesting the rts ssr api"""
+    """Client class for requesting the rts ssr api"""
+    # todo add data validation
 
     url = "https://api.srgssr.ch/oauth/v1/accesstoken"
     querystring = {"grant_type": "client_credentials"}
@@ -124,10 +124,9 @@ class Client:
         todo: enable file_name option
         """
 
-        tmp_arr = data_set['data']
-        if len(tmp_arr) == 1:
-            res = mongo_collection.insert_one(tmp_arr[0])
+        if len(data_set) == 1:
+            res = mongo_collection.insert_one(data_set[0])
             return res
         else:
-            res = mongo_collection.insert_many(tmp_arr)
+            res = mongo_collection.insert_many(data_set)
             return res
