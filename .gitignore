@@ -1,9 +1,4 @@
 .idea/
 venv/
-__pycache__/
-tests/
-setup.py
-LICENSE
-build/
-dist/
+__pycache__
 package/

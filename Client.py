@@ -5,7 +5,7 @@ from urllib import parse
 
 class Client:
 
-    """Client class for requesting the rts ssr api"""
+    """Client classes for requesting the rts ssr api"""
 
     url = "https://api.srgssr.ch/oauth/v1/accesstoken"
     querystring = {"grant_type": "client_credentials"}
@@ -85,7 +85,6 @@ class Client:
         :param: data : data list()
         :param: location : list(), indicates field location in json dataset
         :param: value : str()
-        :param: to_pop : array()
         :return: data filtered : json()
         :todo: enable *args with to_pop arg
         """
@@ -95,12 +94,15 @@ class Client:
         res = ''
 
         for ind, doc in enumerate(data):
-            tmp = doc['program']['id']
-            lookup_data = doc
-            for k in location:
-                lookup_data = lookup_data[k]
-            if lookup_data == value:
-                filtered.append(doc)
+            try:
+                tmp = doc['program']['id']
+                lookup_data = doc
+                for k in location:
+                    lookup_data = lookup_data[k]
+                if lookup_data == value:
+                    filtered.append(doc)
+            except KeyError:
+                pass
         if to_pop:
             try:
                 [doc.pop(to_pop) for doc in filtered]
