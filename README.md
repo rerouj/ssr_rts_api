@@ -71,7 +71,7 @@ res = cl.save_data(data, collection)
 ```
 # Last note
 
-Be kind don't over request the server : use time.sleep()
+Be kind, don't over request the server : use time.sleep()
 ```python
 import time
 
