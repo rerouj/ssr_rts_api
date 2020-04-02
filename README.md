@@ -59,8 +59,14 @@ refine the results with the Client.filter() method
 ```python
 filtered = cl.filter_data(data, ['program', 'id'], 103)  # program id : 103 = Temps Présent
 ```
+Use the to_pop argument to pop out fields of the data set.
+
+```python
+filtered = cl.filter_data(data, ['isOnline'], 'true', 'sequences')  # program id : 103 = Temps Présent
+```
+
 save the result with the Client.save() method
-pass a data and a mongodb collection in parameters
+pass a data array and a mongodb collection in parameters
 ```python
 res = cl.save_data(data, collection)
 ```
