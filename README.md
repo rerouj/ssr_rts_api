@@ -70,7 +70,14 @@ pass a data array and a mongodb collection in parameters
 ```python
 res = cl.save_data(data, collection)
 ```
+# Last note
 
+Be kind don't over request the server : use time.sleep()
+```python
+import time
+
+time.sleep(3)
+```
 # Credit
 
 Renato Diaz (rerouj)
