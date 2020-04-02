@@ -26,8 +26,8 @@ from ssr_rts_api import Client as Cl
 
 pass an object with your credentials for generating a token and
 instantiate a client access to the API  
-username = consumer key
-password = consumer secret
+- username = consumer key
+- password = consumer secret
 
 ```python
 obj = {"username": "your_consumer_key",
