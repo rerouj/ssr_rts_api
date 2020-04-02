@@ -33,10 +33,7 @@ class Client:
         headers = {
             'Content-Type': "application/x-www-form-urlencoded",
             'Authorization': "Basic {}".format(self.auth_credentials.decode()),
-            'User-Agent': "PostmanRuntime/7.19.0",
             'Accept': "*/*",
-            'Cache-Control': "no-cache",
-            'Postman-Token': "af4921db-f624-4f2c-bd69-e2021c870666,6385485b-23ca-4e69-8c88-9908f1168d55",
             'Host': "api.srgssr.ch",
             'Accept-Encoding': "gzip, deflate",
             'Content-Length': "0",
