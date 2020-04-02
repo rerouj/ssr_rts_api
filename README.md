@@ -42,8 +42,8 @@ Pass an object with the desired request inside the Client.request() method
 ```python
 querystring = {
     "query": "'id'='103'",
-    "rows": 1,
-    "start": 0,
+    "rows": 0,
+    "start": 25, # be careful, RTS api returns no more than 25 documents per request
     "minPublicationDate": 1960,
     "maxPublicationDate": 2020,
     "sort": "publicationDate"
