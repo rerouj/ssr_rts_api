@@ -1,7 +1,7 @@
 # ssr_rts_api
 
 Connect with ease to the rts/ssr channel public API.  
-The package is only for accessing the "RTS Archives v3" (broadcast) endpoint
+The package can only access the "RTS Archives v3" (broadcast) endpoint
 
 Enjoy exploring RTS (radio télévision suisse romande) channel broadcast open data 📺 !
 
@@ -16,7 +16,7 @@ Connect to the RTS archives public api can be a little bit confusing. ssr_rts_ap
 
 Go to : https://developer.srgssr.ch/apis/rts-archives-v3  
 Create your app  
-Get your consumer key and secret
+Get your consumer key and consumer secret
   
 **Remember, the package is only for accessing the "RTS Archives v3" (broadcast) API**
     
@@ -35,7 +35,7 @@ obj = {"username": "your_consumer_key",
 
 cl = Cl.Client(obj)
 ```
-Get your token trough the Client.token parameter
+Get your token through the Client.token parameter
 ```python
 print(cl.token)
 ```
